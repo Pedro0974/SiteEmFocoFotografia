@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+</head>
+<body>
+
+  <section id="agendamentos" class="bg-cover hero-section" style="background-image: url(./images/img-agendamentos.jpeg);">
+
+
+        <div class="container text-white text-center">
+          <div class="row">
+            <div class="col-12">
+              <div class="container agendamentos">
+                <div class="content">
+                  <div class="left-side">
+                    <div class="address details">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <div class="topic">Endereço</div>
+                      <div class="text-one">Nome da rua, numero123</div>
+                      <div class="text-two">Bairro Cidade</div>
+                    </div>
+                    <div class="phone details">
+                      <i class="fas fa-phone-alt"></i>
+                      <div class="topic">Telefone</div>
+                      <div class="text-one">+00 00 1234 5678</div>
+                      <div class="text-two">+00 00 1234 5678</div>
+                    </div>
+                    <div class="email details">
+                      <i class="fas fa-envelope"></i>
+                      <div class="topic">Email</div>
+                      <div class="text-one">principal@gmail.com</div>
+                      <div class="text-two">secundario@gmail.com</div>
+                    </div>
+                  </div>
+                  <div class="right-side">
+                    <div class="topic-text">Envie sua mensagem</div>
+                    <p class="text-white">
+                      Tem interesse em marcar um ensaio ou evento comigo? Mande aqui sua duvida ou interesse!!
+                    </p>
+                    <form onsubmit="gotowhatsapp()">
+                      <div class="input-box">
+                        <input type="text" name="name" id="name"  required placeholder="Digite seu nome" />
+                      </div>
+                      <div class="input-box">
+                        <input type="text" name="email" id="email"  required placeholder="Digite seu email" />
+                      </div>
+                      <div class="input-box message-box">
+                        <textarea name="service" id="service"  required placeholder="Digite sua mensagem" ></textarea>
+                      </div>
+                      <div class="button">
+                        <input type="submit" class="btn btn-main" name="submit" id="submit" value="Enviar" />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      <script>
+        function gotowhatsapp() {
+
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var service = document.getElementById("service").value;
+
+        var url = "https://wa.me/553299959594?text="
+        + "Name: " + name + "%0a"
+        + "Email: " + email + "%0a"
+        + "Service: " + service + "%0a";
+
+
+        window.open(url, '_blank').focus();
+        }
+      </script>
+</body>
+</html>
